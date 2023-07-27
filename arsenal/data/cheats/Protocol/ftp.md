@@ -4,13 +4,13 @@
 #platform/linux  #target/remote  #port/21 #protocol/ftp 
 
 ## ftp - download all 
-#cat/ATTACK/FILE_TRANSFERT 
+#cat/ATTACK/FILE_TRANSFER 
 ```
 wget -m ftp://anonymous:anonymous@<ip>
 ```
 
 ## ftp download all (2)
-#cat/ATTACK/FILE_TRANSFERT
+#cat/ATTACK/FILE_TRANSFER
 ```
 wget -m --no-passive ftp://anonymous:anonymous@<ip>
 ```

