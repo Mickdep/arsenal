@@ -1,18 +1,86 @@
-# cheatsheet name
+# Cheatsheet concepts
+## Basic structure
+A cheatsheet is built from multiple components. The cheatsheet will have a title (which will show up as the name of the tool that the command is for), one or more tags, one or more platforms, one or more targets, and one category.
 
-% tag1, tag2
+A basic outline of a cheatsheet looks like the following:
+````
+# Title of the cheatsheet
+% tag1, tag2, tag3, ...
+#platform/<platform> #target/<target> #cat/<category>
 
-#cat/INTERNAL
+## Title of command 1
+[Optional]: % tag1, tag2, tag3, ...
+[Optional]: #platform/<platform> #target/<target> #cat/<category>
+[Optional]: <description>
+```
+<command>
+```
+
+## Title of command 2
+[Optional]: % tag1, tag2, tag3, ...
+[Optional]: #platform/<platform> #target/<target> #cat/<category>
+[Optional]: <description>
+```
+Command text <variable> <variable>...
+```
+
+etc...
+````
+
+Please note that the lines marked with `Optional` are, indeed, optional. These can override the global tags and categories for this cheatsheet. Additionally, you can add a description to give more information about the command or make notes and references (such as a blog/tweet where you got it from).
+
+An example of a cheatsheet:
+
+````
+# Nmap
+
+% external, network, recon
+#platform/multiple #target/remote #cat/RECON
+
+## Nmap version and service scan
+```
+nmap -sV -sC <target> -oN <output_file>
+```
+
+## Nmap all ports
+```
+nmap -p- <target> -oN <output_file>
+```
+
+## Nmap SSH authentication methods
+% ssh, authentication
+This command lists the authentication methods that the SSH service supports
+```
+nmap -sV -sC <target> -p 22 --script="ssh-auth-methods" -oN <output_file>
+```
+
+## Nmap SSL/TLS scan
+```
+nmap -sV -sC <target> -p <port> --script="ssl*" -oN <output_file>
+```
+````
+
+Make careful decisions about the tags, categories, platforms and targets that you assign a cheatsheet/cheat. You can search commands based on all these properties in arsenal.
+
+## Tags
+A cheatsheet can contain tags, which are denoted by the `%` sign:
 
 ```
-#platform/linux
-#platform/windows
-#platform/mac
-#platform/multiple
+% tag1, tag2, tag3...
+```
 
-#target/local 
-#target/remote
+Make careful decisions about which tags you give a cheatsheet and/or cheat. You can search commands in arsenal based on these tags.
 
+## Categories
+A cheatsheet can contain one category, which are denoted by `#cat` :
+
+```
+#cat/category1
+```
+
+The following categories are available in arsenal by default, but these are arbitrary and can easily be extended or modified.
+
+```
 #cat/UTILS
 #cat/RECON
 #cat/ATTACK
@@ -35,40 +103,33 @@
 #cat/POSTEXPLOIT
 #cat/POSTEXPLOIT/CREDS_RECOVER
 #cat/PERSIST
+```
+## Platforms
+A cheatsheet can contain one platform, which is denoted by `#platform`:
 
-#port/<portnum>
+```
+#platform/<platform>
 ```
 
-Tags are used to categorize the cheat sheet
-Command tags start with a #tag the level1 tags are overridden by other tags commands tags are in the form : #key/value
+The following platforms are available in arsenal by default, but these are arbitrary and can easily be extended or modified.
 
-## Command description
-Lines beginning with `#` represents the command main description
-The command need to written between ` ``` `
-you could add additional description inside the paragraph
+```
+#platform/linux
+#platform/windows
+#platform/mac
+#platform/multiple
+```
 
 ## Variables
-<variable_name> represents variable in the command it will be fill by user
 
-## Executable variable prefill
-```
-$ variable_name: ls /tmp
-```
---> prefill the variable <variable_name> with '$(ls /tmp)'
+A command in the cheatsheet can also contain variables. These variables can then be filled in on the fly when the command is selected in arsenal. The variables are denoted with `<var_name>` in the command text. An example is:
 
-## Constant variable prefill
 ```
-= variable_name: /tmp/wordlist.txt
-```
---> prefill the variable <variable_name> with '/tmp/wordlist.txt'
-
-# cheat_sample
-
-% cheat, sample
-
-## cheat sample command
-```
-command <arg1> <arg2>
+Nmap <ip> -p <port>
 ```
 
-Additional description
+Arsenal also offers a way to pre-fill a placeholder for these variables. To do so, specify the following line(s) at the end of the cheatsheet:
+
+```
+= variable_name: variable_value
+```

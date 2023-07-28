@@ -3,14 +3,14 @@
 ![](img/logo.png)
 
 Arsenal is just a quick inventory, reminder and launcher for pentest commands.
-<br>This project written by pentesters for pentesters simplify the use of all the hard-to-remember commands
+<br>This project written by pentesters and for pentesters, to simplify the use of all the hard-to-remember commands.
 
 ![](img/arsenal.gif)
 
-In arsenal you can search for a command, select one and it's prefilled directly in your terminal. This functionality is independent of the shell used. Indeed arsenal emulates real user input (with TTY arguments and IOCTL) so arsenal works with all shells and your commands will be in the history.
+In arsenal you can search for a command, select one and have it prefilled directly in your terminal. This functionality is independent of the shell used. Arsenal emulates real user input (with TTY arguments and IOCTL) so arsenal works with all shells and your commands will be in the history.
 
 You have to enter arguments if needed, but arsenal supports global variables. <br>
-For example, during a pentest we can set the variable `ip` to prefill all commands using an ip with the right one.
+For example, during a pentest you can set the variable `ip` to prefill all commands using an ip with the right one.
 
 To do that you just have to enter the following command in arsenal:
 ```
@@ -133,7 +133,9 @@ pip install -U PyYAML
 - Active directory ACE mindmap
 ![](./mindmap/ACEs_xmind.png)
 
-## TODO cheatsheets 
+## Cheatsheets 
+
+To learn how to write your own cheatsheets, refer to [this](arsenal/data/cheats/) page.
 
 ### reverse shell
 - [X] msfvenom
