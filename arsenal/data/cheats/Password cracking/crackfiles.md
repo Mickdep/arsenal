@@ -46,4 +46,4 @@ keepass2john <file>.kdbx > out.kbdx.hashes && john --wordlist <wordlist> out.kbd
 python3 <path_to_john>/run/office2john.py <file>.xls > out.hash && john --wordlist <wordlist> out.hash
 ```
 
-= wordlist: /usr/share/wordlists/rockyou.txt
+

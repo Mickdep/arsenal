@@ -84,4 +84,3 @@ ffuf -w <wordlist> -u <url> -X POST -d "username=admin\&password=FUZZ" -fc 401
 nikto -C all -h <url>
 ```
 
-= wordlist: /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
